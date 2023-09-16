@@ -14,18 +14,18 @@ npm install vue3-embed-gist
 
 ## Setup
 
-in your main.js (where the app is mounted)
+in your `main.js` (where the app is mounted)
 
 ```javascript
-
 import { createApp } from "vue";
 import App from "./App.vue";
-import GithubGist from "vue3-github-gist";
+
+import GithubGist from "vue3-embed-gist";
+import "vue3-embed-gist/dist/style.css"; //import styles
 
 const app = createApp(App);
 app.use(GithubGist);
 app.mount("#app");
-
 ```
 
 ## Usage 
@@ -38,20 +38,27 @@ app.mount("#app");
 <!-- file name is optional -->
 <!-- you need to either pass an id or a url -->
   <!-- <GithubGist gistUrl="your gist url" file="your file name" /> -->
-  <GithubGist gistId="your gist id" file="your file name" />
+  <GithubGist gistId="your gist id" file="your file name" theme="dark" />
 </template>
 
 ```
 
+
+
 ### Props
-`gistUrl`
+##### `gistUrl`
 Type: `String`
 Required: `true`
 
-`gistID`
+#####  `gistID`
 Type: `String`
-Required: `true`
+Required: `true` 
 
-`file`
+#####  `file`
 Type: `String`
 Required: `false`
+
+#####  `theme`
+Type: `String`
+Required: `false`
+Default: `light`

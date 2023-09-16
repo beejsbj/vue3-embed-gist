@@ -1,6 +1,6 @@
 {
   "name": "vue3-embed-gist",
-  "version": "0.4.8",
+  "version": "1.0.0",
   "description": "A Vue 3 component to embed GitHub Gists",
   "main": "./dist/vue3-embed-gist.umd.cjs",
   "module": "./dist/vue3-embed-gist.js",
@@ -8,7 +8,8 @@
     ".": {
       "import": "./dist/vue3-embed-gist.js",
       "require": "./dist/vue3-embed-gist.umd.js"
-    }
+    },
+    "./dist/style.css": "./dist/style.css"
   },
   "files": [
     "dist"
@@ -21,7 +22,7 @@
   },
   "dependencies": {
     "vue": "^3.3.4",
-	 "jsonp": "^0.2.1"
+    "jsonp": "^0.2.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
